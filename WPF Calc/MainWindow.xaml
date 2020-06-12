@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calc"
         mc:Ignorable="d"
-        Title="WPF CALC" Height="413" Width="413" ResizeMode="NoResize" Style="{Binding Background, ElementName=window}" Foreground="{x:Null}" Background="Black">
+        Title="Calculator" Height="413" Width="413" ResizeMode="NoResize" Style="{Binding Background, ElementName=window}" Foreground="{x:Null}" Background="Black">
 
 
     <Window.Resources>
@@ -74,8 +74,8 @@
         <Button Style="{StaticResource Button}" Click="Button_Click" Content="1" Grid.Row="5" Grid.Column="0"  FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
         <Button Style="{StaticResource Button}" Click="Button_Click" Content="3" Grid.Row="5" Grid.Column="2"  FontFamily="Verdana" FontWeight="Bold" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
         <Button Style="{StaticResource Button}" Tag="addition" Click="Button_Click_2" Content="+" Grid.Row="5" Grid.Column="3" AutomationProperties.Name="addition" FontWeight="Bold" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Button}" Tag="subtraction" Click="Button_Click_2" Content="-" Grid.Row="6" AutomationProperties.Name="subtraction" FontFamily="Verdana" FontWeight="Bold" FontSize="24" Grid.Column="3" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Evaluation_button}" Tag="evaluate" Click="Button_Click_2" Content="=" Grid.Row="6" Grid.Column="2" AutomationProperties.Name="evaluate" FontSize="36" VerticalContentAlignment="Center" FontWeight="SemiBold" FontFamily="Verdana" Background="#FFA8F3B6" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="subtraction" Click="Button_Click_2" Content="-" Grid.Row="6" AutomationProperties.Name="subtraction" FontFamily="Verdana" FontWeight="Bold" Grid.Column="3" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Evaluation_button}" Tag="evaluate" Click="Button_Click_2" Content="=" Grid.Row="6" Grid.Column="2" AutomationProperties.Name="evaluate" VerticalContentAlignment="Center" FontWeight="SemiBold" FontFamily="Verdana" Background="#FFA8F3B6" BorderThickness="0"/>
         <Button Style="{StaticResource Button}" Click="Button_Click" Content="0" Grid.Row="6"  FontFamily="Verdana" FontWeight="Bold" Grid.Column="1" Background="#FFE0FF77" BorderThickness="0" />
         <Button Style="{StaticResource Button}" Tag="_decimal" Click="Button_Click_1" Content="," Grid.Row="6" AutomationProperties.Name="decimal"   FontWeight="Bold" Background="#FFE0FF77" BorderThickness="0"/>
         <Button Style="{StaticResource Button}" Tag="reset" Click="Button_Click_2" Content="C" Grid.Column="0" Grid.Row="1" AutomationProperties.Name="reset"  FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
