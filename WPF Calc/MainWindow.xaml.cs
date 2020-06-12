@@ -86,14 +86,14 @@ namespace WPF_Calc
                     break;
                 case "sqrt":
                     calc.AddOperation(Operation.Sqrt);
-                    calc.ComputeUnar();
+                    
                     break;
                 case "pow":
                     calc.AddOperation(Operation.Pow);
                     break;
                 case "log":
                     calc.AddOperation(Operation.Log);
-                    calc.Compute();
+                    
                     break;
                 case "clear":
                     calc.Clear();
