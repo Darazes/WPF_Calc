@@ -11,15 +11,15 @@
     <Window.Resources>
         <FontFamily x:Key="button">Verdana</FontFamily>
 
-        <Style x:Key="key_button_style" TargetType="Button">
-            <Setter Property="Background" Value="#FFFDFDFD"/>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Background" Value="#FFE0FF77"/>
+            <Setter Property="FontStyle" Value="Italic"/>
         </Style>
-        <Style x:Key="evaluation" TargetType="Button">
-            <Setter Property="Background" Value="#F4E5E5"/>
+        
+        <Style x:Key="Evaluation_button" TargetType="Button">
+            <Setter Property="Background" Value="#FFA8F3B6"/>
         </Style>
-        <Style x:Key="Calc" TargetType="Button">
-            <Setter Property="Background" Value="#F8F8F8"/>
-        </Style>
+
 
     </Window.Resources>
 
@@ -50,7 +50,7 @@
         <Border Margin="1,1,0,1" Grid.ColumnSpan="3" >
             <TextBlock x:Name="output" Text="0" FontFamily="Verdana" FontSize="30" FlowDirection="RightToLeft" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" Tag="output" TextWrapping="Wrap" TextOptions.TextHintingMode="Fixed" Margin="-0.7,-1,-101.923,-1" Foreground="Black">
                 <TextBlock.Background>
-                    <LinearGradientBrush EndPoint="130.312,63" MappingMode="Absolute" SpreadMethod="Repeat" StartPoint="130.312,0">
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#FFE0FF77" Offset="1"/>
                         <GradientStop Color="#FF98F9AE" Offset="0.453"/>
                     </LinearGradientBrush>
@@ -58,31 +58,31 @@
             </TextBlock>
         </Border>
 
-        <Button Style="{StaticResource Calc}" Tag="tan" Click="Button_Click_2" Content="tan" Grid.Row="2" Grid.Column="0" AutomationProperties.Name="tan"  FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="52" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="log" Click="Button_Click_2" Content="log" Grid.Row="2" AutomationProperties.Name="log" FontWeight="Bold" HorizontalAlignment="Right" Width="102" Height="52" VerticalAlignment="Top" Grid.Column="1" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="sin" Click="Button_Click_2" Content="sin" Grid.Row="2" Grid.Column="2" AutomationProperties.Name="sin" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="52" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="cos" Click="Button_Click_2" Content="cos" Grid.Column="3" AutomationProperties.Name="cos"  FontWeight="Bold" Height="52" VerticalAlignment="Top" HorizontalAlignment="Right" Width="102" Grid.Row="2" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="7" Grid.Row="3" Grid.Column="0"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="8" Grid.Row="3" Grid.Column="1"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}"  Click="Button_Click" Content="9" Grid.Row="3" Grid.Column="2"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="division" Click="Button_Click_2" Content="/" Grid.Row="3" Grid.Column="3" IsDefault="True" AutomationProperties.Name="division" FontWeight="Bold" Height="56" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="5" Grid.Row="4" Grid.Column="1"  FontWeight="Bold" Height="51" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0" />
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="4" Grid.Row="4" Grid.Column="0"  FontWeight="Bold" Height="51" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="6" Grid.Row="4" Grid.Column="2"  FontWeight="Bold" Height="51" VerticalAlignment="Top" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="multiplication" Click="Button_Click_2" Content="*" Grid.Row="4" Grid.Column="3" AutomationProperties.Name="multiplication" FontWeight="Bold" Height="51" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="2" Grid.Row="5" Grid.Column="1"  FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="1" Grid.Row="5" Grid.Column="0"  FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="3" Grid.Row="5" Grid.Column="2"  FontFamily="Verdana" FontWeight="Bold" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="addition" Click="Button_Click_2" Content="+" Grid.Row="5" Grid.Column="3" AutomationProperties.Name="addition" FontWeight="Bold" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="subtraction" Click="Button_Click_2" Content="-" Grid.Row="6" AutomationProperties.Name="subtraction" FontFamily="Verdana" FontWeight="Bold" FontSize="24" Grid.Column="3" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource evaluation}" Tag="evaluate" Click="Button_Click_2" Content="=" Grid.Row="6" Grid.Column="2" AutomationProperties.Name="evaluate" FontSize="36" VerticalContentAlignment="Center" FontWeight="SemiBold" FontFamily="Verdana" Background="#FFA8F3B6" BorderThickness="0"/>
-        <Button Style="{StaticResource key_button_style}" Click="Button_Click" Content="0" Grid.Row="6"  FontFamily="Verdana" FontWeight="Bold" Grid.Column="1" Background="#FFE0FF77" BorderThickness="0" />
-        <Button Style="{StaticResource key_button_style}" Tag="_decimal" Click="Button_Click_1" Content="," Grid.Row="6" AutomationProperties.Name="decimal"   FontWeight="Bold" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="reset" Click="Button_Click_2" Content="C" Grid.Column="0" Grid.Row="1" AutomationProperties.Name="reset"  FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="clear" Click="Button_Click_2" Content="CE" AutomationProperties.Name="clearsimbol" FontWeight="Bold"  HorizontalAlignment="Right" Width="102" Height="53" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
-        <Button Style="{StaticResource Calc}" Tag="sqrt" Click="Button_Click_2" Content="√" HorizontalAlignment="Right" Width="101" AutomationProperties.Name="sqrt" FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="tan" Click="Button_Click_2" Content="tan" Grid.Row="2" Grid.Column="0" AutomationProperties.Name="tan"  FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="52" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="log" Click="Button_Click_2" Content="log" Grid.Row="2" AutomationProperties.Name="log" FontWeight="Bold" HorizontalAlignment="Right" Width="102" Height="52" VerticalAlignment="Top" Grid.Column="1" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="sin" Click="Button_Click_2" Content="sin" Grid.Row="2" Grid.Column="2" AutomationProperties.Name="sin" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="52" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="cos" Click="Button_Click_2" Content="cos" Grid.Column="3" AutomationProperties.Name="cos"  FontWeight="Bold" Height="52" VerticalAlignment="Top" HorizontalAlignment="Right" Width="102" Grid.Row="2" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="7" Grid.Row="3" Grid.Column="0"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="8" Grid.Row="3" Grid.Column="1"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}"  Click="Button_Click" Content="9" Grid.Row="3" Grid.Column="2"  FontFamily="Verdana" FontWeight="Bold" Height="56" VerticalAlignment="Top" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="division" Click="Button_Click_2" Content="/" Grid.Row="3" Grid.Column="3" IsDefault="True" AutomationProperties.Name="division" FontWeight="Bold" Height="56" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="5" Grid.Row="4" Grid.Column="1"  FontWeight="Bold" Height="51" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0" />
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="4" Grid.Row="4" Grid.Column="0"  FontWeight="Bold" Height="51" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="6" Grid.Row="4" Grid.Column="2"  FontWeight="Bold" Height="51" VerticalAlignment="Top" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="multiplication" Click="Button_Click_2" Content="*" Grid.Row="4" Grid.Column="3" AutomationProperties.Name="multiplication" FontWeight="Bold" Height="51" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="2" Grid.Row="5" Grid.Column="1"  FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="1" Grid.Row="5" Grid.Column="0"  FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="3" Grid.Row="5" Grid.Column="2"  FontFamily="Verdana" FontWeight="Bold" HorizontalAlignment="Right" Width="101" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="addition" Click="Button_Click_2" Content="+" Grid.Row="5" Grid.Column="3" AutomationProperties.Name="addition" FontWeight="Bold" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="subtraction" Click="Button_Click_2" Content="-" Grid.Row="6" AutomationProperties.Name="subtraction" FontFamily="Verdana" FontWeight="Bold" FontSize="24" Grid.Column="3" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Evaluation_button}" Tag="evaluate" Click="Button_Click_2" Content="=" Grid.Row="6" Grid.Column="2" AutomationProperties.Name="evaluate" FontSize="36" VerticalContentAlignment="Center" FontWeight="SemiBold" FontFamily="Verdana" Background="#FFA8F3B6" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Click="Button_Click" Content="0" Grid.Row="6"  FontFamily="Verdana" FontWeight="Bold" Grid.Column="1" Background="#FFE0FF77" BorderThickness="0" />
+        <Button Style="{StaticResource Button}" Tag="_decimal" Click="Button_Click_1" Content="," Grid.Row="6" AutomationProperties.Name="decimal"   FontWeight="Bold" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="reset" Click="Button_Click_2" Content="C" Grid.Column="0" Grid.Row="1" AutomationProperties.Name="reset"  FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Top" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="clear" Click="Button_Click_2" Content="CE" AutomationProperties.Name="clearsimbol" FontWeight="Bold"  HorizontalAlignment="Right" Width="102" Height="53" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="sqrt" Click="Button_Click_2" Content="√" HorizontalAlignment="Right" Width="101" AutomationProperties.Name="sqrt" FontFamily="Verdana" FontWeight="Bold" Height="53" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
 
-        <Button Style="{StaticResource Calc}" Tag="pow" Click="Button_Click_2" Content="^" Grid.Column="3" AutomationProperties.Name="pow" FontWeight="Bold" HorizontalAlignment="Right" Width="102" Height="53" VerticalAlignment="Top" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
+        <Button Style="{StaticResource Button}" Tag="pow" Click="Button_Click_2" Content="^" Grid.Column="3" AutomationProperties.Name="pow" FontWeight="Bold" HorizontalAlignment="Right" Width="102" Height="53" VerticalAlignment="Top" Grid.Row="1" Background="#FFE0FF77" BorderThickness="0"/>
 
     </Grid>
 </Window>
